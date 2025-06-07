@@ -26,6 +26,8 @@
 - **🛡️ Security** – Fine-grained access control with proper authentication and authorization mechanisms must be enforced.
 - **⚡ Low Latency** – The system should be responsive under any number of user requests, ensuring minimal delays.
 
+---
+
 ## 🗂️ Project structure
 
 ```
@@ -40,3 +42,5 @@
 - Avoids scattering logic across multiple unrelated folders – a common issue in **layer-oriented** structures.
 
 ## 🗃️ ER Diagram
+
+![ER Diagram](./quora-backend_1.png)
