@@ -8,7 +8,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"lint": "eslint --fix",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-		"prepare": "husky"
+		"prepare": "husky",
+		"dev": "node src/server"
 	},
 	"keywords": [],
 	"author": "",
@@ -29,5 +30,14 @@
 		"lint-staged": "^16.1.0",
 		"prettier": "^3.5.3",
 		"typescript-eslint": "^8.33.1"
+	},
+	"dependencies": {
+		"@apollo/server": "^4.12.2",
+		"@as-integrations/express5": "^1.1.0",
+		"body-parser": "^2.2.0",
+		"cors": "^2.8.5",
+		"express": "^5.1.0",
+		"graphql": "^16.11.0",
+		"ioredis": "^5.6.1"
 	}
 }
