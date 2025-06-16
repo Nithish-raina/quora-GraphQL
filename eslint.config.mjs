@@ -4,6 +4,7 @@ import pluginNode from "eslint-plugin-n";
 import eslintPluginPrettier from "eslint-plugin-prettier";
 import pluginReact from "eslint-plugin-react";
 import pluginSecurity from "eslint-plugin-security";
+import securityNodePlugin from "eslint-plugin-security-node";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -16,12 +17,14 @@ export default defineConfig([
 			n: pluginNode,
 			security: pluginSecurity,
 			prettier: eslintPluginPrettier,
+			"security-node": securityNodePlugin,
 			"simple-import-sort": simpleImportSort,
 		},
 		extends: ["js/recommended"],
 		rules: {
 			...pluginNode.configs.recommended.rules,
 			...pluginSecurity.configs.recommended.rules,
+			...securityNodePlugin.configs.recommended.rules,
 			"prettier/prettier": "error",
 			"simple-import-sort/imports": "error",
 			"simple-import-sort/exports": "error",

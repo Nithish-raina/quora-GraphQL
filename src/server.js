@@ -1,3 +1,4 @@
+/* eslint-disable security-node/detect-crlf */
 // server.js
 import { createApp } from "./app.js";
 

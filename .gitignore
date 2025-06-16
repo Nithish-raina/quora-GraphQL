@@ -1,1 +1,3 @@
 node_modules
+# Ignore synk's cache file for vulnerability scanning
+.dccache
