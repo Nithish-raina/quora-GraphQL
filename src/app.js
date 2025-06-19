@@ -4,27 +4,15 @@ import { expressMiddleware } from "@as-integrations/express5";
 import cors from "cors";
 import express from "express";
 
-// Define your GraphQL schema
-const typeDefs = `#graphql
-  type Query {
-    hello: String
-  }
-`;
-
-// Define your resolvers
-const resolvers = {
-	Query: {
-		hello: () => "Hello world!",
-	},
-};
+import { mergedResolvers, mergedTypeDefs } from "./graphql/schema.js";
 
 // Create and return the configured Express app
 export async function createApp() {
 	const app = express();
 
 	const server = new ApolloServer({
-		typeDefs,
-		resolvers,
+		typeDefs: mergedTypeDefs, // ✅ correct
+		resolvers: mergedResolvers,
 	});
 
 	await server.start();

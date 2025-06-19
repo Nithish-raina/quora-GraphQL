@@ -8,7 +8,7 @@
 		"lint": "eslint --fix",
 		"format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
 		"prepare": "husky",
-		"dev": "node src/server"
+		"dev": "nodemon src/server"
 	},
 	"keywords": [],
 	"author": "",
@@ -34,11 +34,14 @@
 	"dependencies": {
 		"@apollo/server": "^4.12.2",
 		"@as-integrations/express5": "^1.1.0",
+		"@graphql-tools/merge": "^9.0.24",
 		"body-parser": "^2.2.0",
 		"cors": "^2.8.5",
 		"express": "^5.1.0",
 		"graphql": "^16.11.0",
+		"graphql-tag": "^2.12.6",
 		"ioredis": "^5.6.1",
-		"md5": "^2.3.0"
+		"md5": "^2.3.0",
+		"uuid": "^11.1.0"
 	}
 }
